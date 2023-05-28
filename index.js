@@ -18,6 +18,7 @@ const shoppingListInDB = ref(database, "shoppingList");
 const inputFieldEl = document.getElementById("input-field");
 const addButtonEl = document.getElementById("add-button");
 const shoppingListEl = document.getElementById("shopping-list");
+const messageEl = document.getElementById("message");
 
 addButtonEl.addEventListener("click", function () {
   let inputValue = inputFieldEl.value;
@@ -26,7 +27,7 @@ addButtonEl.addEventListener("click", function () {
 
     clearInputFieldEl();
   } else {
-    shoppingListEl.innerHTML = "please enter a value in the input box";
+    messageEl.innerHTML = "please enter a value in the input box";
   }
 });
 
